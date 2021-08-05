@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Page from '../components/Page'
 
 export default function Welcome() {
   return (
-    <div>
+    <Page>
       Welcome Page!
       <ul>
         <li>
@@ -13,6 +14,6 @@ export default function Welcome() {
           <Link to="/imgcomupload">Image Compressor</Link>
         </li>
       </ul>
-    </div>
+    </Page>
   )
 }
