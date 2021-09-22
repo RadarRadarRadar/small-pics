@@ -13,6 +13,9 @@ export default function Welcome() {
         <li>
           <Link to="/imgcomupload">Image Compressor</Link>
         </li>
+        <li>
+          <Link to="/randompic">Random Pic</Link>
+        </li>
       </ul>
     </Page>
   )

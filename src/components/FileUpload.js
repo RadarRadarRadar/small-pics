@@ -12,20 +12,33 @@ export default function FileUpload() {
     setUploadFile(fileBlob)
   }
 
+  function handleFileClear() {
+    setUploadFile('')
+  }
+
   return (
     <div>
       <Button
         variant="contained"
         component="label"
         >
-        Upload File
+        Upload Picture
           <input
             type="file"
             hidden
             onChange={handleUpload}
             />
       </Button>
-      {!uploadingFile ? '' : <PicViewer data={uploadingFile}/>}
+      <Button
+        variant="contained"
+        component="label"
+        onClick={handleFileClear}
+        >
+        Clear Picture
+      </Button>
+      <div>
+        <PicViewer data={uploadingFile}/>
+      </div>
     </div>
   )
 }

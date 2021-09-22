@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import Welcome from './pages/Welcome'
 import About from './pages/About'
 import ImageCompressorUpload from './pages/ImageCompressorUpload';
+import RandomPicPage from './pages/RandomPicPage';
 
 function App() {
   return (
@@ -26,6 +27,12 @@ function App() {
             path="/imgcomupload"
             render={() => (
               <ImageCompressorUpload />
+            )}
+          />
+          <Route
+            path="/randompic"
+            render={() => (
+              <RandomPicPage />
             )}
           />
         </Switch>

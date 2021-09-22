@@ -1,30 +1,16 @@
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
+import styled from 'styled-components'
 
-
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 2000,
-    width: 1000,
-  },
-  media: {
-    height: 500,
-  },
-});
+const PicViewerStyles = styled.img`
+  max-width: 50vw;
+  background-size: auto;
+`
 
 export default function MediaCard(img) {
-  const classes = useStyles();
-  console.log(img.data);
+  // console.log(img.data);
 
   return (
     <div>
-      <Card className={classes.root}>
-          <CardMedia
-            className={classes.media}
-            image={img.data}
-            />
-      </Card>
+      {img.data ? <PicViewerStyles src={img.data} alt='the thing' /> : 'No Image Yet' }
     </div>
   );
 }
